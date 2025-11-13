@@ -427,13 +427,12 @@
 <!--https://en.wikipedia.org/wiki/Electromagnetic_lock-->
 
 
-document.onkeydown = function(e) {
-  if (e.keyCode == 123 || (e.ctrlKey && e.shiftKey && e.keyCode == 73)) {
-    return false;
-  }
-};
+document.querySelectorAll('a[href$=".png"]').forEach(link => {
+    link.setAttribute('download', '');
+  });
 </script>
 
 
 </body>
 </html>
+
